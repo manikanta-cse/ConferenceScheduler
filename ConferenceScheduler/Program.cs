@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConferenceScheduler
 {
@@ -6,7 +7,15 @@ namespace ConferenceScheduler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var talks = new FileInputParser().Parse("input.txt");
+
+            var sortedTalks = talks.OrderByDescending(t => t, new TalkComparer()).ToList();
+
+            var schedule = new SessionScheduler().Schedule(sortedTalks);
+
+            new ConsoleWriter().Write(schedule);
+
+            Console.ReadKey();
         }
     }
 }
