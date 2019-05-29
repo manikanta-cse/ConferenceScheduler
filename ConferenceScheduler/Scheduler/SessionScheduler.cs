@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace ConferenceScheduler
+namespace ConferenceScheduler.Scheduler
 {
     public class SessionScheduler
     {
@@ -46,8 +45,8 @@ namespace ConferenceScheduler
                 MorningSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(180),
-                    EndTime = "12PM",
-                    StartTime = 9,
+                    EndTime = new TimeSpan(hours:12,minutes:0,seconds:0),
+                    StartTime = new TimeSpan(hours: 9, minutes: 0, seconds: 0),
                     Filled = TimeSpan.FromMinutes(0),
                     Remaining = TimeSpan.FromMinutes(180),
                     Talks = new List<Talk>()
@@ -56,28 +55,28 @@ namespace ConferenceScheduler
                 LunchSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(60),
-                    EndTime = "1PM",
-                    StartTime = 12,
-                    //Filled = TimeSpan.FromMinutes(0),
-                    //Remaining = TimeSpan.FromMinutes(60),
+                    EndTime = new TimeSpan(13),
+                    StartTime = new TimeSpan(12),
+                    Filled = TimeSpan.FromMinutes(0),
+                    Remaining = TimeSpan.FromMinutes(60),
                     Talks = new List<Talk>() { new Talk { Duration = 60, Title = "Lunch Break" } }
                 },
                 AfternoonSession = new Session()
                 {
-                    Duration = TimeSpan.FromMinutes(180),
-                    EndTime = "4PM",
-                    StartTime = 1,
+                    Duration = TimeSpan.FromMinutes(240),
+                    EndTime = new TimeSpan(hours: 17, minutes: 0, seconds: 0),
+                    StartTime = new TimeSpan(hours: 13, minutes: 0, seconds: 0),
                     Filled = TimeSpan.FromMinutes(0),
-                    Remaining = TimeSpan.FromMinutes(180),
+                    Remaining = TimeSpan.FromMinutes(240),
                     Talks = new List<Talk>()
                 },
                 NetworkingSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(60),
-                    StartTime = 4,
-                    EndTime = "5PM",
-                    //Filled = TimeSpan.FromMinutes(0),
-                    //Remaining = TimeSpan.FromMinutes(60),
+                    StartTime = new TimeSpan(hours: 17, minutes: 0, seconds: 0),
+                    EndTime = new TimeSpan(hours: 18, minutes: 0, seconds: 0),
+                    Filled = TimeSpan.FromMinutes(0),
+                    Remaining = TimeSpan.FromMinutes(60),
                     Talks = new List<Talk>() { new Talk { Duration = 60, Title = "Networking" } }
                 }
             };
@@ -87,8 +86,8 @@ namespace ConferenceScheduler
                 MorningSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(180),
-                    EndTime = "12PM",
-                    StartTime = 9,
+                    EndTime = new TimeSpan(hours: 12, minutes: 0, seconds: 0),
+                    StartTime = new TimeSpan(hours: 9, minutes: 0, seconds: 0),
                     Filled = TimeSpan.FromMinutes(0),
                     Remaining = TimeSpan.FromMinutes(180),
                     Talks = new List<Talk>()
@@ -97,28 +96,28 @@ namespace ConferenceScheduler
                 LunchSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(60),
-                    EndTime = "1PM",
-                    StartTime = 12,
-                    //Filled = TimeSpan.FromMinutes(0),
-                    //Remaining = TimeSpan.FromMinutes(60),
+                    EndTime = new TimeSpan(hours: 13, minutes: 0, seconds: 0),
+                    StartTime = new TimeSpan(hours: 12, minutes: 0, seconds: 0),
+                    Filled = TimeSpan.FromMinutes(0),
+                    Remaining = TimeSpan.FromMinutes(60),
                     Talks = new List<Talk>() { new Talk { Duration = 60, Title = "Lunch Break" } }
                 },
                 AfternoonSession = new Session()
                 {
-                    Duration = TimeSpan.FromMinutes(180),
-                    EndTime = "4PM",
-                    StartTime = 1,
+                    Duration = TimeSpan.FromMinutes(240),
+                    EndTime = new TimeSpan(hours: 17, minutes: 0, seconds: 0),
+                    StartTime = new TimeSpan(hours: 13, minutes: 0, seconds: 0),
                     Filled = TimeSpan.FromMinutes(0),
-                    Remaining = TimeSpan.FromMinutes(180),
+                    Remaining = TimeSpan.FromMinutes(240),
                     Talks = new List<Talk>()
                 },
                 NetworkingSession = new Session()
                 {
                     Duration = TimeSpan.FromMinutes(60),
-                    StartTime = 4,
-                    EndTime = "5PM",
-                    //Filled = TimeSpan.FromMinutes(0),
-                    //Remaining = TimeSpan.FromMinutes(60),
+                    StartTime = new TimeSpan(hours: 16, minutes: 0, seconds: 0),
+                    EndTime = new TimeSpan(hours: 17, minutes: 0, seconds: 0),
+                    Filled = TimeSpan.FromMinutes(0),
+                    Remaining = TimeSpan.FromMinutes(60),
                     Talks = new List<Talk>() { new Talk { Duration = 60, Title = "Networking" } }
                 }
             };

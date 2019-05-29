@@ -6,8 +6,8 @@ namespace ConferenceScheduler
 {
     public class Session
     {
-        public int StartTime { get; set; }
-        public string EndTime { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
         public TimeSpan Duration { get; set; }
         public TimeSpan Remaining { get; set; }
 
