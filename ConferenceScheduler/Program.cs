@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
+using ConferenceScheduler.Parsers;
 using ConferenceScheduler.Scheduler;
+using ConferenceScheduler.Talk;
+using ConferenceScheduler.Writer;
 
 namespace ConferenceScheduler
 {

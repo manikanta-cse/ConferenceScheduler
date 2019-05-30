@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace ConferenceScheduler
+namespace ConferenceScheduler.Conference
 {
     public class Session
     {

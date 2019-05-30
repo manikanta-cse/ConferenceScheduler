@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ConferenceScheduler
+namespace ConferenceScheduler.Parsers
 {
     public class FileInputParser
     {
 
         private const char SEPERATOR = ' ';
-        public IEnumerable<Talk> Parse(string filename)
+        public IEnumerable<Conference.Talk> Parse(string filename)
         {
             var lines = File.ReadAllLines(filename);
 
-            var talks = new List<Talk>();
+            var talks = new List<Conference.Talk>();
 
             foreach (var line in lines)
             {
@@ -25,9 +24,9 @@ namespace ConferenceScheduler
 
         }
 
-        private Talk ParseTalk(string line)
+        private Conference.Talk ParseTalk(string line)
         {
-            return new Talk()
+            return new Conference.Talk()
             {
                 Title = line,
                 Duration = GetDuration(line)

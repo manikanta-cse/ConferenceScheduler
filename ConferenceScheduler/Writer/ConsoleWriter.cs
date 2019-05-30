@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using ConferenceScheduler.Conference;
 
-namespace ConferenceScheduler
+namespace ConferenceScheduler.Writer
 {
     public class ConsoleWriter
     {
@@ -27,7 +27,7 @@ namespace ConferenceScheduler
             Console.WriteLine();
         }
 
-        private void PrintTalks(IEnumerable<Talk> talks)
+        private void PrintTalks(IEnumerable<Conference.Talk> talks)
         {
             foreach (var talk in talks)
             {
